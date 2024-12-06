@@ -1,0 +1,105 @@
+From Python 3.7 Dicts are ORDERED.
+
+Properties:
+1. Unordered (3.6) /Ordered (3.7)
+2. Unique : if we add same key it will overwrite existing key.
+3. Mutable : we modify key-val of dict once it created.
+
+
+
+--------------------------------
+***** Creating Dict *****
+
+1. Using Curly Braces : dict = {}
+2. Using dict() constructor
+3. Usng Sequence having key-val pair : dict([("name","saanvi")])
+
+--------------------------------
+***** Accessing elements of a dictionary *****
+
+1.access value using key name in []
+     print(persone[name])
+2.get key value using key name in get()
+    print(person.get("age"))
+
+--------------------------------
+***** Get all keys and values  *****
+
+1. keys()  : returns list of keys
+2. values(): retunrs list of values
+3. items() : returns all items
+--------------------------------
+***** Iterating a dictionary *****
+
+use for loop for getting keys or values separately
+
+--------------------------------
+***** Adding items to the dictionary *****
+
+1. Using key-value assignment: person["weight"] = 50
+2. Using update() Method: person.update({"height": 6})
+
+--------------------------------
+***** set defaults *****
+
+We can set default key-val to dict using dict.setdefault("k","v")
+
+--------------------------------
+***** Modify the values of the dictionary keys *****
+
+1. Using Key name : person["country"] = "Canada"
+2.Using update() : person.update({"country": "USA"})
+
+--------------------------------
+***** Removing items from the dictionary *****
+
+1. pop(key[,]) : removes specified key and  returns its value
+2. popitem : removes last inserted item
+3. del key : deletes value of that key passed
+4. clear() : clears all dict data
+5. del dict : delets dictionary
+
+--------------------------------
+***** Join two dictionary *****
+
+1. Using update() : dict1.update(dict2)
+2. Using **kwargs to unpack : student_dict = {**student_dict1, **student_dict2, **student_dict3}
+
+--------------------------------
+***** copying dict *****
+
+1. dict2 = dict1.copy()
+2. dict3 = dict(dict1)
+3. dict4 = dict(dict1.items())
+4. dict5 = dict1
+
+
+
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****
+--------------------------------
+*****  *****

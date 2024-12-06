@@ -1,0 +1,123 @@
+******* Set *******
+
+--------------------------------
+Properties:
+
+1. Un-Ordered, insertion order doesn't maintain
+2. Immutable
+3. Heterrogeneous
+4. No Duplicates
+
+--------------------------------
+***** Creating a Set *****
+
+1. using {} braces # {1,2,'a',"saanvi",5.5}
+2. set() constructor  # sample_set = set(("Harry Potter", "Angels and Demons", "Atlas Shrugged"))
+3. from a list : lst =[10,20,30,40,10,20,30,40] , set = set(lst) # {10,20,30,40}
+
+--------------------------------
+***** Accessing items of a set *****
+No indes is present as insertion order not preserved, Hence use for loop / if with in cond can help
+
+--------------------------------
+***** Find the length of a set *****
+set_length = len(my_set)
+
+--------------------------------
+***** Adding items to a Set *****
+
+1. add() # one item at a time
+book_set = {"java","python"}
+book_set.add("scala")
+2. update() # can add multiple items
+book_set.update(["rust","golang"])
+
+--------------------------------
+***** Removing item(s) from a set *****
+
+1. remove() # can remove single item at a time if not present throws ERROR
+2. discard() # removes single item ,if not present doesn't throw ERROR
+3. pop() #removes any random elements
+4. clear() #removes all element and give empty set
+5. del set # deletes entier set
+
+
+--------------------------------
+***** Set Operations *****
+
+1. Union #duplciates will be dropped
+2. Intersection #common items from both
+3. Difference #returns unique elements from Set A which are not in Set B
+4. Symmetric Difference #returns elements which are not common from both Sets (opposite to Intersection)
+5.intersection_update()
+-->intersection() will not update the original set but intersection_update() will update the original set with only the common elements.
+-->intersection() will have a return value which is the new set with common elements between two or more sets whereas intersection_update() will not have any return value.
+6.difference_update().
+-->The difference() method will not update the original set while difference_update() will update the original set.
+-->The difference() method will return a new set with only the unique elements from the set on which this method was called. difference_update() will not return anything.
+7.symmetric_difference_update().
+There are two main differences between these two methods.
+-->The symmetric_difference() method will not update the original set while symmetric_difference_update() will update the original set with the unique elements from both sets.
+-->symmetric_difference() method  with the same set of elements before and after the operation whereas the original set is updated in symmetric_difference_update() and the return value is None in the case of the symmetric_difference_update().
+
+--------------------------------
+***** Copying a Set *****
+
+1.copy() : shallow copy
+2.set() : shallow copy
+3. = operator : deep copy
+
+--------------------------------
+***** Subset and Superset *****
+
+1.issubset() : smaller set i.e part of main set
+2.issuperset() : bigger set i.e parent set
+
+--------------------------------
+***** disjoint *****
+
+1.disjoint() : To find out if two sets have any common elements. If no match TRUE else FALSE
+
+--------------------------------
+***** Sort the set *****
+
+sorted() : #sorted(set1)
+
+--------------------------------
+***** Using Python built-in functions for Set *****
+
+1.all() : TRUE if all items are TRUE else if one ZERO or one FALSE gives FALSE
+2.any() : TRUE if any items are TRUE else FALSE if all are FALSE
+3.min() :
+4.max() :
+
+
+--------------------------------
+***** Frozen Set *****
+
+Frozen Set is an immutable unordered collection of unique items.
+frozen_set = frozenset(set1)
+
+We can use all set operations like :
+1.intersection()
+2.union()
+3.difference()
+4.symmetric_difference()
+
+--------------------------------
+***** Nested Sets *****
+
+A set cannot have mutable objects as its elements. So we can’t have another set inside a set.
+But we can use FROZENSET for creating NESTED SET
+
+nested_set = set((frozenset(rainbow), frozenset(other_colors)))
+
+--------------------------------
+***** Set comprehension *****
+
+output = {expression(variable) for variable in inputSet [if variable condition1]...}
+
+output = {var ** 2  for var in range(1,10) if var % 2 == 0}
+--------------------------------
+***** *****
+--------------------------------

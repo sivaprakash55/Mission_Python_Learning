@@ -1,0 +1,43 @@
+def my_func():
+    fucntion_body
+    return one,two,three
+
+my_func()
+
+------- **** **** ---------
+1. Positional Arguments
+
+def my_func(a,b):
+    #body
+    return
+
+my_func(5,3)
+
+------- **** **** ---------
+2.Keyword Arguments
+
+def my_func(name ,age):
+    #body
+    return
+
+my_func(name='siva',age =30)
+------- **** **** ---------
+3. Default Arguments
+
+if no arg passed defualt value will be used
+
+def my_func(name = 'siva')
+    #body
+    return
+
+my_func('prakash')
+my_func()
+
+------- **** **** ---------
+4. Variable-Length Arguments
+
+my_func(*var)
+
+
+------- **** **** ---------
+------- **** **** ---------

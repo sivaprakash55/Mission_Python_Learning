@@ -1,0 +1,141 @@
+Tuples:
+
+1. Ordered , i.e Insertion order is preserved
+2. Immutable, can;t change values
+3. Heterogeneous , accepts different data types
+4. Accepts Duplicates
+
+-----------------
+Can create as follows :
+
+1. tuple = () # num_tuple = (1,2,3,4,4,"Siva", "a")
+2. tpl = tuple() # str_tuple = tuple('saanvi',1,2,3,['a','z'])
+
+-----------------------
+Create a tuple with a single item:
+
+my_tuple = ("siva",)
+
+-----------------------
+Packing and Unpacking
+
+tuple1 = 'a',1,'saanvi'
+
+i,j,k = tuple1
+
+----------------------
+Iterating a Tuple
+
+for i in tuple1:
+    print(i)
+
+---------------------
+Accessing items of a Tuple
+
+1. index --> tuple1[0], tuple1[-1]
+2. slicing -> tuple1[1:4]
+
+---------------------
+Finding an item in a Tuple
+
+index() can be used to find a tuple element.
+index(item,start,stop)
+
+ex: tuple1.index(1) # res : 1
+
+tuple1 = (10, 20, 30, 40, 50, 60, 70, 80)
+tuple1.index(60, 4, 6)
+
+-------------------
+Checking if an item exists
+
+print(500 in tuple1) # False
+print(80 in tuple1)  #True
+
+-------------------
+*****Modify nested items of a tuple******
+
+tuple1 = (10, 20, [25, 75, 85])
+
+tuple1[2][0] = 250
+
+print(tuple1) # (10, 20, [250, 75, 85])
+
+We can convert Tuple to List and make changes , then change back into Tuple
+
+tuple1 =(1,2,3,4,5,6)
+lst = list(tuple1)
+lst[0] = 100
+tuple1= tuple(lst)
+print(tuple1)
+
+---------------
+*** Removing items from a tuple ***
+
+Tuples are immitable, hence no methods for delete.
+
+1. del -->  del sampletup1  # deletes entire tuple
+2. convert to list and do operations
+
+--------------
+*** Count the occurrence of an item in a tuple ***
+
+tuple1 = (10, 20, 60, 30, 60, 40, 60)
+
+print(tuple1.count(60))  # 3
+
+---------------
+*** Copying a tuple ***
+
+we can use = operator ,but it will create reference to original tuple as tuples are immutable (shallow copy)
+
+
+--------------
+Concatenating two Tuples
+
+tuple1 = (1, 2, 3, 4, 5)
+tuple2 = (3, 4, 5, 6, 7)
+
+1. Using + operator
+new_tuple = tuple1+tuple2
+
+2. Using sum() function
+
+new_tuple = sum((tuple1,tuple2),()) # it need one empty tuple
+
+3. using chain() function
+
+import itertools as it
+
+tuple3 = tuple(item for item in it.chain(tuple1,tuple2))
+
+-------------------
+*** Nested tuples ***
+
+nested_tuple = ((1,2,3),(4,5,6),'python')
+
+for i in nested_tuple:
+    for j in i:
+    print(j,end =' ')
+
+-------------------------
+*** Built-in Functions ***
+
+min(),max() will work only for homogeneous tuple elements.
+
+all()
+if all elements true or for empty tuple it gives TRUE
+one/more false or all false it gives FALSE
+
+any()
+all true or one/more false gives TRUE
+all false or empty tuple give FALSE
+
+----------------------------------------------------------------------------------
+*** When to use TUPLES ***
+
+1. No write changes of data i.e no data updates while processing
+2. Tuples can be used as KEYS for Dictionaries as they are immutable.
+3. Search is faster as index remains same.
+4. It contains Heterogeneous data that give more data flexibiltiy like alphanumeric chars.
+

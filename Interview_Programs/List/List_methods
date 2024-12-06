@@ -1,0 +1,35 @@
+Creating a List :
+
+lst = List("items")
+lst = []
+
+Add list items:
+
+lst.append(item) # only one item will be added
+lst.insert(index,item) # inserts an item at given index
+lst.extend(lst) #adds other list to current at the end
+
+Remove List items:
+
+lst.remove(item) #removes first occurence of the element
+lst.pop(index) #removes item at the given index
+lst.clear() #clears all list elements. empty list is the result
+del lst #deletes list
+
+Copying a list:
+
+1) Using assignment operator (=)
+
+this is straigth forward approach and its deep copy, i.e changes in original list will reflect in new list
+
+lst1 = lst2
+
+2)Using the copy() method
+
+this is shallow copy , changes in original list won't affect in new list.
+
+
+IMP Concepts :
+
+1. List Slicing
+2. List Comprehension
